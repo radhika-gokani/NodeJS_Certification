@@ -81,7 +81,7 @@ getAll = ()=>{
             orders.forEach((o)=>{
                 orderdate = new Date(o.createdAt)
                 let timeDiff = curdate.getTime() - orderdate.getTime();
-                var DaysDiff = Math.ceil(Math.abs(timeDiff / (1000 * 3600 * 24)));
+                var DaysDiff = Math.floor(Math.abs(timeDiff / (1000 * 3600 * 24)));
                 if(DaysDiff == 0) result.push({...o._doc,status : 'In progress'})
                 else if(DaysDiff == 1) result.push({...o._doc,status : 'Dispatched'})
                 else result.push({...o._doc,status : 'Delivered'})
