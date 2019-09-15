@@ -1,0 +1,48 @@
+<html>
+    
+    <% include ./partials/head %>
+    <style>
+    .card {
+        width: 30%;
+        margin: 5% auto;
+    }
+    </style>
+    <body>
+        <div class="card">
+            <div class="card-body">
+                <h3>Add Order</h3>
+                <br />
+                <form method="POST" action="/orders">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="exampleInputEmail1" name="name" placeholder="Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="exampleInputEmail1" name="address" placeholder="Address">
+                    </div>
+                    <div class="form-group">
+                      <input type="email" class="form-control" id="exampleInputEmail1" name="email" placeholder="Email">
+                    </div>
+                    <label class="form-check-label">Shopping items</label>                      
+                    <div class="form-group form-check">
+                      <input type="checkbox" class="form-check-input" id="item1" name="items" value="Clothes">
+                      <label class="form-check-label" for="item1">Clothes</label>                      
+                    </div>
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="item2" name="items" value="Shoes">
+                      <label class="form-check-label" for="item2">Shoes</label>
+                    </div>
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="item3" name="items" value="Electronics">
+                      <label class="form-check-label" for="item3">Electronics</label>
+                    </div>
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="item4" name="items" value="Accessories">
+                      <label class="form-check-label" for="item4">Accessories</label>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Add</button>
+                  </form>
+            </div>
+          </div>
+    </body>
+</html>

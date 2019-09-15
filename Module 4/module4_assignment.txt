@@ -1,0 +1,27 @@
+1)
+db.movies.insert({ "name": "Black Panther","language": "ENGLISH","rating": 4.5,"genre":"Superhero" })	
+db.movies.insert({ "name": "Black Friday","language": "ENGLISH","rating": 4.5,"genre": "Action Adventure Fantasy"})
+db.movies.insert({ "name": "Avengers","language": "ENGLISH","genre": "Action","rating": 5 })
+db.movies.insert({ "name": "Mission Impossible","language": "English","rating": 2.5,"genre": "Horror Thriller"})
+db.movies.insert({"name": "Incredibles 2","language": "ENGLISH","genre": "Animated","rating": 4})
+
+2)
+ db.movies.find({}) or  db.movies.find()
+
+3)
+db.movies.findOne({ "name": "Avengers"})	
+
+4)
+db.movies.find().sort({rating:-1}).limit(3)
+
+5)
+db.movies.update({ "name": "Avengers"},{ $set :{ "achievements":"Super hit"}})
+
+db.movies.save({"_id" : ObjectId("50691737d386d8fadbd6b01d"), "name": "Mission Impossible","language":"English","rating": 2.5,"genre": "Horror Thriller","achievements":"Super Duper Hit"})
+
+
+6)
+db.movies.find({ $or : [{"achievements":"Super hit"},{"achievements":"Super Duper hit"}] })
+
+7)
+db.movies.find({ "achievements" : { $exists : true } })
