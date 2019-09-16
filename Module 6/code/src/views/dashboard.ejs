@@ -1,0 +1,45 @@
+<html>
+    
+    <% include ./partials/head %>
+    <style>
+    .table-danger{
+      color: red;
+    }
+    </style>
+    <body>
+        <header>
+            <% include ./partials/header %>
+        </header>
+        <div id="output"></div>
+        <table class="table table-striped table-dark">
+                <thead>
+                  <tr>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Assignee</th>
+                    <th>date</th>
+                    <th>time</th>
+                    <th>Days Left to solve bug</th>
+                  </tr>
+                </thead>
+                <tbody>
+
+                  <% for(var i=0; i < bugs.length; i++) { %>
+                    <tr class="<% if (bugs[i].daysLeft == 0) { %>
+                        table-danger
+                        <% } %>"
+                      >
+                        <td><%= bugs[i].title %></td>
+                        <td><%= bugs[i].description %></td>
+                        <td><%= bugs[i].assignee %></td>
+                        <td><%= bugs[i].date %></td>
+                        <td><%= bugs[i].time %></td>
+                        <td><%= bugs[i].daysLeft %></td>
+                    </tr>
+                  <% } %>
+                 
+                </tbody>
+              </table>
+    </body>
+</html>
+

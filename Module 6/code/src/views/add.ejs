@@ -1,0 +1,33 @@
+<html>
+    
+    <% include ./partials/head %>
+    <style>
+    .card {
+        width: 30%;
+        margin: 5% auto;
+    }
+    </style>
+    <body>
+        <div class="card">
+            <div class="card-body">
+                <h3>Add Bug</h3>
+                <br />
+                <form method="POST" action="/bugs">
+                    <div class="form-group">
+                        <input type="text" class="form-control"  name="title" placeholder="Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="description" placeholder="Description">
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" name="assignee" placeholder="Assignee">
+                    </div>
+                    
+                    
+                    
+                    <button type="submit" class="btn btn-primary">Add</button>
+                  </form>
+            </div>
+          </div>
+    </body>
+</html>
