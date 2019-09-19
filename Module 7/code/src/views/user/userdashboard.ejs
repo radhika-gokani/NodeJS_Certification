@@ -1,0 +1,32 @@
+<html>
+    
+    <% include ../partials/head %>
+    
+    <body>
+        <div id="output"></div>
+        <table class="table table-striped table-dark">
+                <thead>
+                  <tr>
+                    <th>Id</th>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                  </tr>
+                </thead>
+                <tbody>
+
+                  <% for(var i=0; i < items.length; i++) { %>
+                    <tr>
+                        <td><%= items[i].id %></td>
+                        <td><%= items[i].product %></td>
+                        <td><%= items[i].quantity %></td>
+                        <td><%= items[i].price %></td>
+                        
+                    </tr>
+                  <% } %>
+                 
+                </tbody>
+              </table>
+    </body>
+</html>
+

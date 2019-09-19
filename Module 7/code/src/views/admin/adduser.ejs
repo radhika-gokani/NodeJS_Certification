@@ -1,0 +1,47 @@
+<html>
+    
+    <% include ../partials/head %>
+    <style>
+    .card {
+        width: 30%;
+        margin: 5% auto;
+    }
+    </style>
+    <body>
+        <div class="card">
+            <div class="card-body">
+                <h3>Add user</h3>
+                <br />
+                <% if(error) { %>
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <%= error %>
+                      </div>
+                      <% }%>
+                      
+                <form method="POST" action="/api/admins/adduser">
+                    <div class="form-group">
+                        <input type="text" class="form-control"  name="username" placeholder="username">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" name="password" placeholder="password">
+                    </div>
+                    <div class="form-group">
+                            <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="usertype" id="usertype1" value="admin" checked>
+                                    <label class="form-check-label" for="usertype1">
+                                      Admin
+                                    </label>
+                                  </div>
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="usertype" id="usertype2" value="user">
+                                    <label class="form-check-label" for="usertype2">
+                                      User
+                                    </label>
+                                  </div>
+                        </div>
+                    <button type="submit" class="btn btn-primary">Add</button>
+                  </form>
+            </div>
+          </div>
+    </body>
+</html>

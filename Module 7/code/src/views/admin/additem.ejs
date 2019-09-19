@@ -1,0 +1,36 @@
+<html>
+    
+    <% include ../partials/head %>
+    <style>
+    .card {
+        width: 30%;
+        margin: 5% auto;
+    }
+    </style>
+    <body>
+        <div class="card">
+            <div class="card-body">
+                <h3>Add item</h3>
+                <br />
+                <% if(error) { %>
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <%= error %>
+                      </div>
+                      <% }%>
+                      
+                <form method="POST" action="/api/admins/additem">
+                    <div class="form-group">
+                        <input type="text" class="form-control"  name="product" placeholder="product">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" class="form-control" name="quantity" placeholder="quantity" min=0>
+                    </div>
+                    <div class="form-group">
+                            <input type="number" class="form-control" name="price" placeholder="price" min=0>
+                        </div>
+                    <button type="submit" class="btn btn-primary">Add</button>
+                  </form>
+            </div>
+          </div>
+    </body>
+</html>
