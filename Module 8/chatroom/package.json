@@ -1,9 +1,16 @@
 {
-    "name": "chatapp",
-    "virsion": "0.0.1",
-    "private": "true",
-    "dependencies": {
-        "socket.io": "*",
-        "express": "*"
-    }
+  "name": "chatroom",
+  "version": "1.0.0",
+  "description": "Edureka node js certification- module 8 assignment - chatroom",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Radhika Gokani",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^1.19.2",
+    "socket.io": "^2.3.0"
+  }
 }
