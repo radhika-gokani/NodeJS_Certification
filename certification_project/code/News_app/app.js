@@ -5,7 +5,7 @@ var request         = require('request')
 var cors            = require('cors')
 const News          = require('./models/news');
 const sgMail = require('@sendgrid/mail');
-sgMail.setApiKey('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'); // your api key
+sgMail.setApiKey(''); // your api key
 
 
 const app = express();
@@ -71,7 +71,7 @@ app.post('/sendmail',(req,res)=>{
 })
 
 app.get('/weather',(req,res)=>{
-    let appid = '8e47c6db209d370ba495b5a1f9430f95'
+    let appid = ''
     if(req.query.latitude && req.query.longitude){
         let url = 'http://api.openweathermap.org/data/2.5/weather?lat='+req.query.latitude+'&lon='+req.query.longitude+'&units=metric&cnt=2&APPID='+appid
         request(url, (err,response,body) =>{
